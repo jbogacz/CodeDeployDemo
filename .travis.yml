@@ -1,8 +1,9 @@
 language: java
 jdk: oraclejdk8
 script:
-notifications:
-  email: jakub.bogacz@jeesoft.pl
+  - ./mvnw clean
+  - ./mvnw package-DskipTests
+
 before_deploy:
   - mkdir -p dpl_cd_upload
   - ls -ltr
@@ -26,3 +27,6 @@ deploy:
     application: CodeDeployDemo
     deployment_group: travis-dg
     on: *2
+
+notifications:
+  email: jakub.bogacz@jeesoft.pl
