@@ -3,13 +3,14 @@
 ##
 language: java
 jdk: oraclejdk8
+cache: bundler
 script:
-  - ./mvnw clean package -DskipTests
+  - ./mvnw package -DskipTests
 
 before_deploy:
   - mkdir -p dpl_cd_upload
   - ls -ltr
-  - cp CodeDeployDemo dpl_cd_upload/CodeDeployDemo
+  - cp target/hello-0.0.1-SNAPSHOT.jar dpl_cd_upload/hello.jar
 deploy:
   - provider: s3
     access_key_id: AKIAI3MJNSSSA2ETFTSQ
