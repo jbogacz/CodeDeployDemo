@@ -1,8 +1,10 @@
+##
+## TravisCI build and deploy to AWS
+##
 language: java
 jdk: oraclejdk8
 script:
-  - ./mvnw clean
-  - ./mvnw package-DskipTests
+  - ./mvnw clean package -DskipTests
 
 before_deploy:
   - mkdir -p dpl_cd_upload
