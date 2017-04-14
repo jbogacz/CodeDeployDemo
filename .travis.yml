@@ -4,9 +4,9 @@ script:
 notifications:
   email: jakub.bogacz@jeesoft.pl
 before_deploy:
-  mkdir -p dpl_cd_upload
-  ls -ltr
-  cp CodeDeployDemo dpl_cd_upload/CodeDeployDemo
+  - mkdir -p dpl_cd_upload
+  - ls -ltr
+  - cp CodeDeployDemo dpl_cd_upload/CodeDeployDemo
 deploy:
   - provider: s3
     access_key_id: AKIAI3MJNSSSA2ETFTSQ
