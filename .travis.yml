@@ -24,6 +24,7 @@ deploy:
   - provider: codedeploy
     access_key_id: AKIAI3MJNSSSA2ETFTSQ
     secret_access_key: *1
+    region: eu-west-1
     bucket: codedeploy-demo-backet
     key: hello
     bundle_type: zip
