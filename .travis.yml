@@ -9,6 +9,7 @@ script:
 
 before_deploy:
   - mkdir -p dpl_cd_upload
+  - ls
   - cp target/hello-0.0.1-SNAPSHOT.jar dpl_cd_upload/hello.jar
 deploy:
   - provider: s3
@@ -23,11 +24,11 @@ deploy:
   - provider: codedeploy
     access_key_id: AKIAI3MJNSSSA2ETFTSQ
     secret_access_key: *1
-    bucket: CodeDeployDemo
-    key: CodeDeployDemo
+    bucket: codedeploy-demo-backet
+    key: hello
     bundle_type: zip
     application: CodeDeployDemo
-    deployment_group: travis-dg
+    deployment_group: CodeDeployDemoGroup
     on: *2
 
 notifications:
