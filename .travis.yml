@@ -10,8 +10,8 @@ script:
 before_deploy:
   - mkdir -p dpl_cd_upload
   - ls
-  - cp target/hello-0.0.1-SNAPSHOT.jar dpl_cd_upload/hello.jar
-  - cp target/appspec.yml dpl_cd_upload/appspec.yml
+  - tar cvf deployment.tar target/hello-0.0.1-SNAPSHOT.jar target/appspec.yml
+  - cp deployment.tar dpl_cd_upload/deployment.tar
 deploy:
   - provider: s3
     access_key_id: AKIAI3MJNSSSA2ETFTSQ
@@ -29,7 +29,7 @@ deploy:
     region: eu-west-1
     bucket: codedeploy-demo-backet
     key: appspec.yml
-#    bundle_type: zip
+    bundle_type: tar
     application: CodeDeployDemo
     deployment_group: CodeDeployDemoGroup
     on: *2
