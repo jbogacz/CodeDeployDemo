@@ -15,6 +15,8 @@ before_deploy:
   - ls -al
   - tar cvf deployment.tar hello-0.0.1-SNAPSHOT.jar appspec.yml
   - ls -al
+  - cd ..
+  - ls -al
 deploy:
   - provider: s3
     access_key_id: AKIAI3MJNSSSA2ETFTSQ
