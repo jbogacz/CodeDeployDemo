@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /hello-0.0.1-SNAPSHOT.jar
+  - source: hello-0.0.1-SNAPSHOT.jar
     destination: /tmp/codedeploy-deployment-staging-area/
 hooks:
   ApplicationStart:
