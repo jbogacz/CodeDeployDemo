@@ -29,7 +29,7 @@ deploy:
     region: eu-west-1
     bucket: codedeploy-demo-backet
     key: appspec.yml
-    bundle_type: zip
+#    bundle_type: zip
     application: CodeDeployDemo
     deployment_group: CodeDeployDemoGroup
     on: *2
