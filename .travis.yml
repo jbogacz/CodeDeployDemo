@@ -9,9 +9,10 @@ script:
 
 before_deploy:
   - mkdir -p dpl_cd_upload
-  - ls
-  - tar cvf deployment.tar target/hello-0.0.1-SNAPSHOT.jar target/appspec.yml
-  - ls
+#  - ls
+  - cd target
+  - tar cvf deployment.tar hello-0.0.1-SNAPSHOT.jar appspec.yml
+#  - ls
   - cp deployment.tar dpl_cd_upload/deployment.tar
 deploy:
   - provider: s3
