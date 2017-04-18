@@ -28,7 +28,7 @@ deploy:
     secret_access_key: *1
     region: eu-west-1
     bucket: codedeploy-demo-backet
-    key: hello.jar
+    key: appspec.yml
     bundle_type: zip
     application: CodeDeployDemo
     deployment_group: CodeDeployDemoGroup
