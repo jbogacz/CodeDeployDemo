@@ -50,15 +50,15 @@
 				<directory>src/main/resources</directory>
 				<excludes>
 					<exclude>appspec.yml</exclude>
+					<exclude>application_start.sh</exclude>
 				</excludes>
 			</resource>
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
 					<include>appspec.yml</include>
+					<include>application_start.sh</include>
 				</includes>
-				<!-- relative to target/classes
-                     i.e. ${project.build.outputDirectory} -->
 				<targetPath>..</targetPath>
 			</resource>
 		</resources>

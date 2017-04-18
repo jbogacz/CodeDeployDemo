@@ -9,14 +9,10 @@ script:
 
 before_deploy:
   - mkdir -p dpl_cd_upload
-  - cp target/hello-0.0.1-SNAPSHOT.jar dpl_cd_upload/hello-0.0.1-SNAPSHOT.jar
-  - cp target/appspec.yml dpl_cd_upload/appspec.yml
-  - cd dpl_cd_upload
-  - ls -al
-  - tar cvf deployment.tar hello-0.0.1-SNAPSHOT.jar appspec.yml
-  - ls -al
+  - cd target
+  - tar cvf deployment.tar hello-0.0.1-SNAPSHOT.jar appspec.yml application_start.sh
+  - cp deployment.tar ../dpl_cd_upload
   - cd ..
-  - ls -al
 deploy:
   - provider: s3
     access_key_id: AKIAI3MJNSSSA2ETFTSQ
