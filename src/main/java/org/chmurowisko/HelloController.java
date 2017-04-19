@@ -11,7 +11,7 @@ public class HelloController {
 
     @RequestMapping(path = "hello")
     public String index() {
-        return "Greetings from Chmurowisko ! ! ! ! A teraz deploy";
+        return "Greetings from Chmurowisko!!!!";
     }
 
 }
