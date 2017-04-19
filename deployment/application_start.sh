@@ -1,4 +1,4 @@
 #!/bin/bash
 pwd
 ls -al
-java -jar hello-0.0.1-SNAPSHOT.jar
+java -jar hello-0.0.2-SNAPSHOT.jar
