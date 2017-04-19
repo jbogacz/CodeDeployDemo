@@ -9,7 +9,7 @@ script:
 
 before_deploy:
   - mkdir -p dpl_cd_upload
-  - zip cvf deployment.zip target/hello-0.0.1-SNAPSHOT.jar target/appspec.yml target/application_start.sh
+  - zip deployment.zip target/hello-0.0.1-SNAPSHOT.jar target/appspec.yml target/application_start.sh
   - cp deployment.zip dpl_cd_upload/deployment.zip
 deploy:
   - provider: s3
