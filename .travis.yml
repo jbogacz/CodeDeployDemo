@@ -9,8 +9,8 @@ script:
 
 before_deploy:
   - mkdir -p dpl_cd_upload
-  - zip -j deployment.zip target/hello-0.0.1-SNAPSHOT.jar target/appspec.yml target/application_start.sh
-  - cp deployment.zip dpl_cd_upload/deployment.zip
+  - zip -j package.zip target/hello-0.0.1-SNAPSHOT.jar deployment/*
+  - cp package.zip dpl_cd_upload/package.zip
 deploy:
   - provider: s3
     access_key_id: AKIAI3MJNSSSA2ETFTSQ
@@ -27,7 +27,7 @@ deploy:
     secret_access_key: *1
     region: eu-west-1
     bucket: codedeploy-demo-backet
-    key: deployment.zip
+    key: package.zip
     bundle_type: zip
     application: CodeDeployDemo
     deployment_group: CodeDeployDemoGroup
