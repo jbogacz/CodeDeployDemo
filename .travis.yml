@@ -12,16 +12,16 @@ before_deploy:
   - zip deployment.zip target/hello-0.0.1-SNAPSHOT.jar target/appspec.yml target/application_start.sh
   - cp deployment.zip dpl_cd_upload/deployment.zip
 deploy:
-  - provider: s3
-    access_key_id: AKIAI3MJNSSSA2ETFTSQ
-    secret_access_key: &1
-      secure: rjg0Jy8iq+MWM0Sp1J8mOmsR/oIt6njXjAvrvzcA0V+FMxmkJO9A1ZrrF+E7oohZ3FxMWk6E7r+ZEZdLhOWiCFSJzxbeCv2UbPIdyoGHR8uKU+8z59vuBA72zL+d8Z6gr96rIqW/vicMlR+0n26JHCcSuH8uNFqppoEkYVN1NRcuNlOK8OSv9rcgZJJ0U0dU6JkWBjnQF6Rr6zMT3FSifvRTmAlmPIhr/qLOdQoYimBlPlDkyweVJAH7wKL4XMcjGN4G6UbVqwgMuWdWUtRIqQPYgL/YQs9hXL1g2cSFJwq9UT+REnRinhqvMT/E0Mgc7iFzVNU6gP5YpySoeXLF3Zy8fBIInxCLbVoXoSVpFdfaM4Q2vV6kfVHaiDVOG3BDlsqBHT52nOoFV3GownYEtcrlEwZ7K8GS3Vrf/dGKagaDs9+42lVm2O4RhjsMMffEfW4cq6LyBxXQ4Rhh7Jah2J4dbBpcBdcpKRM4+KIcG/EUP6Eps5UWVJ7q1pKr2Vuy6byXZwzJMhogYLGmZn+mS3zk5rEPbuNh/310PwWGSTe3ERqa6bW5XktlxZkGSHUx156Dk8N5/wWyWjkiMMYeUp1rKiZsTYUg1jUsEme76r8FWlG72xLcbX2pqPy0d3njlXJfOlqjh4sg5m1UgeKcuNIEyybjihKSL/EFMByh3Aw=
-    local_dir: dpl_cd_upload
-    skip_cleanup: true
-    on: &2
-      repo: jbogacz/CodeDeployDemo
-    region: eu-west-1
-    bucket: codedeploy-demo-backet
+#  - provider: s3
+#    access_key_id: AKIAI3MJNSSSA2ETFTSQ
+#    secret_access_key: &1
+#      secure: rjg0Jy8iq+MWM0Sp1J8mOmsR/oIt6njXjAvrvzcA0V+FMxmkJO9A1ZrrF+E7oohZ3FxMWk6E7r+ZEZdLhOWiCFSJzxbeCv2UbPIdyoGHR8uKU+8z59vuBA72zL+d8Z6gr96rIqW/vicMlR+0n26JHCcSuH8uNFqppoEkYVN1NRcuNlOK8OSv9rcgZJJ0U0dU6JkWBjnQF6Rr6zMT3FSifvRTmAlmPIhr/qLOdQoYimBlPlDkyweVJAH7wKL4XMcjGN4G6UbVqwgMuWdWUtRIqQPYgL/YQs9hXL1g2cSFJwq9UT+REnRinhqvMT/E0Mgc7iFzVNU6gP5YpySoeXLF3Zy8fBIInxCLbVoXoSVpFdfaM4Q2vV6kfVHaiDVOG3BDlsqBHT52nOoFV3GownYEtcrlEwZ7K8GS3Vrf/dGKagaDs9+42lVm2O4RhjsMMffEfW4cq6LyBxXQ4Rhh7Jah2J4dbBpcBdcpKRM4+KIcG/EUP6Eps5UWVJ7q1pKr2Vuy6byXZwzJMhogYLGmZn+mS3zk5rEPbuNh/310PwWGSTe3ERqa6bW5XktlxZkGSHUx156Dk8N5/wWyWjkiMMYeUp1rKiZsTYUg1jUsEme76r8FWlG72xLcbX2pqPy0d3njlXJfOlqjh4sg5m1UgeKcuNIEyybjihKSL/EFMByh3Aw=
+#    local_dir: dpl_cd_upload
+#    skip_cleanup: true
+#    on: &2
+#      repo: jbogacz/CodeDeployDemo
+#    region: eu-west-1
+#    bucket: codedeploy-demo-backet
   - provider: codedeploy
     access_key_id: AKIAI3MJNSSSA2ETFTSQ
     secret_access_key: *1
