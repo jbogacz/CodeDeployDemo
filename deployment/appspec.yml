@@ -1,5 +1,16 @@
 version: 0.0
 os: linux
+files:
+   - source: /
+     destination: /app/hello
+permissions:
+   - object: /app/hello
+     pattern: "**"
+     owner: root
+     group: root
+     mode: 755
+     type:
+       - file
 hooks:
   ApplicationStart:
     - location: application_start.sh
