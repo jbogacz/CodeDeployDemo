@@ -1,3 +1,6 @@
 #!/bin/bash
-cd /app/hello
-/etc/init.d/hello stop
+
+hello_run=/etc/init.d/hello
+if [ ! -L $hello_run ]; then
+    hello_run stop
+fi
