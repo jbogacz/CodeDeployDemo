@@ -13,7 +13,7 @@ before_deploy:
   - cp package.zip dpl_cd_upload/package.zip
 deploy:
   - provider: s3
-    access_key_id: AKIAI3MJNSSSA2ETFTSQ
+    access_key_id: AKIAJJNARXKENLGJCQGA
     secret_access_key: &1
       secure: NMkrDAKyhtLtOZHQGnMOWEJw4DoeZdWDfTO5oaD5kJ0aVt1cOXTXO49LX6H4OSjsf/t0pK6gnTE5nDgKjgagj+1HH8Gz/Irjq2l6IVV/WT78bIOCyQOIo+XlbP8+uYpnGSerkYaAbYCcMg+itPqwNXiEktPBcc3/lXeLD7CN6hcAwkiMoA3oeNmfVD0xi2FihMhIkwgtC4QKF1gE8mK/Fr0Lf/SbisyOI6tHAIFvwe6HpGlDKRB3n3L/2WBHo7/iiMMPFXU/LrZmCpEFXmltyJaegXjOTqXzJCfbn1rElIWKVDHRdg4gOv+A4GfTRFWGVTKdIJXp4XvDJYjpvylLNbooO6OJSmeVQl15r6IVKhA8DPmTgWicaqgha6otHydAnpyY4jnpVX/VWjjXASFqm4Q3Frc7cmwoHR+PjIkJeNiIBE6Euw9WMqRyhxguRdXjkzkuMMQJzZ6rLjqDNxwc3ZqSqImk7IF1NxzNMoB2HXl9co35VkoaeAlm9SodnhEtjMrUcJYU3ZgfigL7T+gMl1iAi4oUC9C1VKarqrJ4AKEnNgZJ4ZOJ92N8MFWeyXdJXnL8KQJ3hq9+FTUnVSr7juQJwrBZIdooQwvmAFgkrj44LfSU8wPBfFqZ8f3Fq9txdCTPolXA6n7nI0rs6jatsaTuVvpjBGpYM7oF4nMLI/A=
     local_dir: dpl_cd_upload
@@ -23,7 +23,7 @@ deploy:
     region: eu-west-1
     bucket: codedeploy-demo-bucket-1234
   - provider: codedeploy
-    access_key_id: AKIAI3MJNSSSA2ETFTSQ
+    access_key_id: AKIAJJNARXKENLGJCQGA
     secret_access_key: *1
     region: eu-west-1
     bucket: codedeploy-demo-bucket-1234
